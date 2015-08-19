@@ -1,0 +1,31 @@
+<ul class="menu">
+    <li><a ui-sref="module1">module1</a></li>
+    <li><a ui-sref="followers">Github followers</a></li>
+  </ul>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ui-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="app/bower_components/angular/angular.js"></script>
+  <script src="app/bower_components/ui-router/release/angular-ui-router.js"></script>
+  <script src="app/bower_components/underscore/underscore-min.js"></script>
+  <script src="app/bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+  <script src="app/app.js"></script>
+  <!-- build:module1 -->
+  <script src="app/components/module1/module1.js"></script>
+  <script src="app/components/module1/module1.route.js"></script>
+  <script src="app/components/module1/module1.service.js"></script>
+  <script src="app/components/module1/module1.controller.js"></script>
+  <!-- endbuild -->
+  <!-- build:followers -->
+  <script src="app/components/followers/followers.js"></script>
+  <script src="app/components/followers/followers.route.js"></script>
+  <script src="app/components/followers/followers.service.js"></script>
+  <script src="app/components/followers/followers.controller.js"></script>
+  <!-- endbuild -->

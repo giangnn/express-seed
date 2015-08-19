@@ -1,0 +1,39 @@
+<form class="form-horizontal" ng-submit="reload()">
+	<div class="form-group">	
+	<label class="col-md-3 control-label">Github username</label>
+	<div class="col-md-4">		
+		<input class="form-control" ng-model="view.user" type="text"/>
+	</div>
+	<div class="col-md-1">
+		<button class="btn btn-primary" type="submit">Find followers</button>
+	</div>	
+</div>
+
+</form>
+
+<table st-pipe="reloadFollowers" st-table="displayedFollowers" st-safe-src="users" class="table table-striped table-bordered table-condensed">
+	<thead>
+		<tr>
+			<th class="text-center">ID</th>
+			<th class="text-center">Username</th>
+			<th class="text-center">Avatar</th>
+		</tr>
+	</thead>
+	<tbody ng-show="view.isLoading">
+		<tr>
+			<td colspan="3" class="text-center">Loading ... </td>
+		</tr>
+	</tbody>
+	<tbody ng-show="!view.isLoading">
+		<tr ng-repeat="follower in displayedFollowers">
+			<td class="text-right">{{follower.id}}</td>
+			<td class="text-center">{{follower.login}}</td>
+			<td class="text-center"><a target="_blank" href="{{follower.avatar_url}}"><img height="32" width="32" ng-src="{{follower.avatar_url}}"/></a></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td class="text-center" st-pagination="" st-items-by-page="10" st-displayed-pages="" colspan="3"></td>
+		</tr>
+	</tfoot>
+</table>

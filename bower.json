@@ -1,0 +1,23 @@
+{
+  "name": "express-seed",
+  "version": "0.0.0",
+  "authors": [
+    "giangnn <giangnn@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "html5-boilerplate": "~5.2.0",
+    "underscore": "~1.8.3",
+    "ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "angular-smart-table": "~2.1.2"
+  }
+}
